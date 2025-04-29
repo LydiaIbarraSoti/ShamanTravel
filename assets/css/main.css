@@ -158,8 +158,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 50px;
   margin-right: 8px;
+  border-radius: 30px;
 }
 
 .header .logo h1 {
@@ -978,7 +979,7 @@ section,
 }
 
 .tabs .nav-link.active {
-  background: color-mix(in srgb, var(--accent-color), transparent 96%);
+  background: color-mix(in srgb, var(--accent-color), transparent 75%);
   color: var(--default-color);
 }
 
@@ -1687,8 +1688,42 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# botones flotantes
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+.social-floating {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-floating a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 5px 0;
+  background-color: #25d366; /* WhatsApp default */
+  color: white;
+  font-size: 20px;
+  border-radius: 5px 0 0 5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-floating a.facebook {
+  background-color: #3b5998;
+}
+
+.social-floating a.instagram {
+  background-color: #e4405f;
+}
+
+.social-floating a:hover {
+  transform: translateX(-5px);
 }
